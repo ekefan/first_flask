@@ -6,17 +6,17 @@ JOBS = [{
     'id': 1,
     'title': 'Social media strategist',
     'location': 'Remote',
-    'salary': None,
+    'salary': '25k',
 }, {
     'id': 2,
     'title': 'frontend engineer',
     'location': 'Remote',
-    'salary': None,
+    'salary': '25k',
 }, {
     'id': 3,
     'title': 'fullstack engineer',
     'location': 'Remote',
-    'salary': None,
+    'salary': '25k',
 }]
 
 
