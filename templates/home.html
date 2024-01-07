@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-bs-theme="light">
 <head>
   <title>Horizon unleashed</title>
+  <meta chartset='utf-8'>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
-    h1 {
-      font-size: 40px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100, 100, 100);
-      text-align: center;
-    }
-
     #banner {
       width: 100%;
-      height: 360px;
+      height: 260px;
       object-fit: cover;
     }
-
-    h2 {
-      font-family: Roboto;
-      font-size: 32px;
-      color: rgb(100, 100, 100);
-      text: align center;
-      font-weight:normall;
-      text-align: center;
-      font-weight: normal;
-    }
-    .bodytext {
-      font-family: Roboto;
-      color: rgb(80)80, 80);
-    }
-    #container {
-      max-width: 720px;
-      margin: 0 auto; 
-    }
   </style>
+  </head>
 </head> 
 <body>
- <div id="container">
-   <h1>Volunteering Opportunities</h1>
-   <img id="banner" src='/static/careers.jpg' height='320'>
-   <h2>About The HU workforce</h2>
-   <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Massa tincidunt dui ut ornare. Metus dictum at tempor commodo. Nibh tellus molestie nunc non. Sed risus pretium quam vulputate dignissim suspendisse in. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Nec nam aliquam sem et tortor consequat id. Ac ut consequat semper viverra nam libero. Et ligula ullamcorper malesuada proin libero. Nunc faucibus a pellentesque sit amet porttitor.</p>
-   <h2>Useful Positions</h2>
-   <p class="bodytext">TODO - show the jobs here</p>
-  <div style='text-align:center;'> 
-    <button>Contact Us</button>
+ <div class="container">
+   <h1 class="text-center mt-2 mb-4">Volunteering Opportunities</h1>
+   <img class="img-fluid" id="banner"src='/static/careers.jpg'>
+   <h2 class="text-center mt-2 mb-4">About The HU workforce</h2>
+   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Massa tincidunt dui ut ornare. Metus dictum at tempor commodo. Nibh tellus molestie nunc non. Sed risus pretium quam vulputate dignissim suspendisse in. Metus dictum at tempor commodo ullamcorper a lacus vestibulum sed. Nec nam aliquam sem et tortor consequat id. Ac ut consequat semper viverra nam libero. Et ligula ullamcorper malesuada proin libero. Nunc faucibus a pellentesque sit amet porttitor.</p>
+   <h2 class="text-center">Open Positions</h2>
+   <p>
+     <div>
+       {%for job in jobs%}
+       {% include 'jobitem.html'%}
+       {% endfor%}
+     </div>
+   </p>
+  <div class="text-center mt-2 mb-4"> 
+    <button class="btn btn-outline-primary">Apply</button>
     <p> copyright 2023, horizon unleashed </p>
   </div>
  </div>
