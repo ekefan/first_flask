@@ -31,3 +31,22 @@
     margin: 0 auto; 
   }
 </style>
+
+
+
+So I could not add the sql database to the application but if I were to add one,
+
+
+
+I would:
+def data_base.get_jobs(id)
+  read from the database the job row with the job id
+  return dict(job)
+
+
+
+create a route
+@app.route('/jobs/<id>')
+def show_jobs(id):
+  job = data_base.get_jobs(id) #database would be an app that conects the web app to the database
+  render_template('jobpage.htmml', job)
